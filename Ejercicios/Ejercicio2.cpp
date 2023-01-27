@@ -43,6 +43,8 @@ int main(){
         } 
     }while (continuar);
     
+    
+    
     return 0;
 }
 
@@ -52,7 +54,7 @@ void pedirDatos(Producto *X, int n){
 
     for (int i = 0; i < n; i++)
     {  
-        cout << "----------- Productos ---------" << endl;
+        cout << "\n----------- Productos ---------" << endl;
         cout << "Ingrese el nombre del producto: \n";
         getline(cin, X1.nombre);
 
@@ -75,7 +77,7 @@ void mostrarDatos(Producto *X, int n){
         Producto *X1 = &X[i];
         
         cout << "\n\n----------Lista de Productos----------" << endl;
-        cout << "--------------Producto ["<< i <<"]--------------"<< endl;
+        cout << "--------------Producto ["<< i + 1 <<"]-------------"<< endl;
         cout << "Nombre: " << X1->nombre << "\n";
         cout << "Precio: " << X1->precio << "\n";
         cout << "Tienda: " << X1->nombreTienda << "\n";

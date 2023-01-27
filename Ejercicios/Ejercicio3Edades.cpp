@@ -17,7 +17,8 @@ int main(){
     
     imprimirEdades(edades, cantidad);
 
-
+    delete[] edades;
+    
     return 0;
 }
 
