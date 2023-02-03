@@ -16,11 +16,13 @@ float becaDescuento;
 
 void pedirDatos();
 void mostrarDatos();
-void descuento();
+float descuento(int);
 
 float descuento75();
 float descuento45();
 float descuento25();
+
+
 
 int main(){
 
@@ -36,13 +38,14 @@ int main(){
 void pedirDatos()
 {
 
+    
     cout << "Ingrese el nombre: \n";
     getline(cin, estudiante01.nombre);
     cout << "Ingrese la cuota: \n";
     cin >> estudiante01.cuota;
 
     cout << "Ingrese el tipo de beca que tiene: \n";
-    cout << " 1- Beca del 75% \n 2- Beca del 45% \n 3- Beca del 25%\n";
+    cout << " 1- Beca del 75% \n 2- Beca del 45% \n 3- Beca del 25%\n 4- No tiene beca.\n";
 
     switch (estudiante01.beca)
    {
@@ -57,6 +60,8 @@ void pedirDatos()
     case 3: 
         descuento25();
     break;
+    case 4:
+
    
    default:
     break;
@@ -68,14 +73,17 @@ void pedirDatos()
 
 }
 
-void descuento()
-{
+float descuento(int)
+{   
+    float descuentoxd;
     float descuento;
 
     if (estudiante01.mesesPagar >= 2)
     {
         descuento= estudiante01.cuota*0.15;
     }
+
+    return descuento;
 }
 
 
@@ -109,7 +117,7 @@ void mostrarDatos()
     cout << "\n-------------------------------------\n";
     cout << "Nombre: " << estudiante01.nombre <<endl;
     cout << "Couta: " << estudiante01.cuota << endl;
-    cout << "Cuota Final es con tipo de beca [" << estudiante01.beca << "] y su total a pagar es: " << estudiante01.cuota -  << endl;
+    cout << "Cuota Final es con tipo de beca [" << estudiante01.beca << "] y su total a pagar es: " << estudiante01.cuota << endl;
     
     if (estudiante01.mesesPagar>=2)
     {
@@ -119,6 +127,8 @@ void mostrarDatos()
     {
         cout << "No le se aplico el descuento" << endl;
     }
+
+    cout << "";
     
 
 
